@@ -1,0 +1,9 @@
+{
+	"HELLO": "Hello {{value}}",
+	"Hello world": "Hello world",
+	"Simple": "Simple",
+	"This is ngx-translate demo": "This is ngx-translate demo",
+	"tets": "tets",
+	"world": "world",
+	"world222": "world222"
+}

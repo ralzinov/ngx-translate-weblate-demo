@@ -1,0 +1,16 @@
+
+<h3>{{'Simple'|translate}}</h3>
+<p translate>Hello world</p>
+<p>{{'Hello world'|uppercase|translate}}</p>
+
+<h3>With params:</h3>
+<p>{{'HELLO'|translate:param}}</p>
+<p translate [translateParams]="param$|async">HELLO</p>
+
+
+<h3>Pipes:</h3>
+<p>Date: {{date|date:undefined:undefined:lang}}<p>
+<p>Currency: {{balance|currency:undefined:undefined:undefined:lang}}<p>
+
+<h3></h3>
+<!--"./src/app/**/!(*.spec).ts"-->

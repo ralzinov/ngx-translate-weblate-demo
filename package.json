@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev": "ng serve --proxy-config proxy.conf.json",
+    "server": "nodemon server/index.js",
+    "i18n-extract": "ngx-translate-extract --key-as-default-value --sort --patterns '/**/*.html' '/**/!(*.spec).ts' --input ./src/app --output ./locales/en.json",
+    "i18n-lint": "ngx-translate-lint --config i18n-lint-config.json"
   },
   "private": true,
   "dependencies": {
@@ -29,10 +33,16 @@
     "@angular/cli": "~7.1.0",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
-    "@types/node": "~8.9.4",
+    "@ngx-translate/core": "^12.1.1",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "ngx-translate-lint": "^1.6.0",
+    "@biesbjerg/ngx-translate-extract": "^4.2.0",
+    "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "express": "^4.17.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
@@ -40,9 +50,10 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "nodemon": "^2.0.2",
     "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
+    "ts-node": "^7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.2.4"
   }
 }

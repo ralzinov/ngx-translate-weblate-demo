@@ -10,29 +10,31 @@
     "e2e": "ng e2e",
     "dev": "ng serve --proxy-config proxy.conf.json",
     "server": "nodemon server/index.js",
-    "i18n-extract": "ngx-translate-extract --key-as-default-value --sort --patterns '/**/*.html' '/**/!(*.spec).ts' --input ./src/app --output ./locales/en.json",
+    "i18n-extract": "ngx-translate-extract --key-as-default-value --sort --clean --patterns '/**/*.html' '/**/!(*.spec).ts' --input ./src/app --output ./locales/en.json",
     "i18n-lint": "ngx-translate-lint --config i18n-lint-config.json"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.1.0",
-    "@angular/common": "~7.1.0",
-    "@angular/compiler": "~7.1.0",
-    "@angular/core": "~7.1.0",
-    "@angular/forms": "~7.1.0",
-    "@angular/platform-browser": "~7.1.0",
-    "@angular/platform-browser-dynamic": "~7.1.0",
-    "@angular/router": "~7.1.0",
+    "@angular/animations": "~7.2.16",
+    "@angular/common": "~7.2.16",
+    "@angular/compiler": "~7.2.16",
+    "@angular/core": "~7.2.16",
+    "@angular/forms": "~7.2.16",
+    "@angular/platform-browser": "~7.2.16",
+    "@angular/platform-browser-dynamic": "~7.2.16",
+    "@angular/router": "~7.2.16",
     "core-js": "^2.5.4",
+    "messageformat": "^2.3.0",
+    "ngx-translate-messageformat-compiler": "^4.5.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "~7.1.0",
-    "@angular/compiler-cli": "~7.1.0",
-    "@angular/language-service": "~7.1.0",
+    "@angular/cli": "~7.3.9",
+    "@angular/compiler-cli": "~7.2.16",
+    "@angular/language-service": "~7.2.16",
     "@ngx-translate/core": "^12.1.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "ngx-translate-lint": "^1.6.0",
@@ -54,6 +56,6 @@
     "protractor": "~5.4.0",
     "ts-node": "^7.0.1",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.4"
+    "typescript": "3.2.4"
   }
 }

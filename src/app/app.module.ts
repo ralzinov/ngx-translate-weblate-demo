@@ -5,7 +5,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {TranslationsProvider} from './locale-loader/locale-loader';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ListComponent } from './list/list.component';
+import {ListComponent} from './list/list.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { ListComponent } from './list/list.component';
         ListComponent
     ],
     imports: [
+        CommonModule,
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,

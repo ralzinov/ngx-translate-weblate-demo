@@ -14,6 +14,9 @@ export class ListComponent implements OnInit {
     date = new Date();
     balance = 42.37;
 
+    count = 0;
+    // gender = 'male';
+
     param = {value: WORLD_CONSTANT};
     param$ = this.translate.stream(WORLD_CONSTANT).pipe(
         map((value) => ({value}))

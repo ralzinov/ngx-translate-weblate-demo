@@ -2,11 +2,12 @@ import {Observable} from 'rxjs';
 import {tap} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {registerLocaleData} from '@angular/common';
-import {TranslateLoader, TranslateModuleConfig} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModuleConfig, TranslateCompiler} from '@ngx-translate/core';
 import {default as fr} from '@angular/common/locales/fr';
 import {default as en} from '@angular/common/locales/en';
 import {default as enExtra} from '@angular/common/locales/extra/en';
 import {default as frExtra} from '@angular/common/locales/extra/fr';
+import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-compiler';
 
 
 const LOCALES = {
@@ -37,6 +38,10 @@ export const TranslationsProvider: TranslateModuleConfig = {
         provide: TranslateLoader,
         useClass: TranslationsLoader,
         deps: [HttpClient]
+    },
+    compiler: {
+        provide: TranslateCompiler,
+        useClass: TranslateMessageFormatCompiler
     },
     useDefaultLang: false
 };

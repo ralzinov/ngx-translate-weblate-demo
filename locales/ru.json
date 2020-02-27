@@ -1,9 +1,9 @@
 {
-    "HELLO": "",
-    "Hello world": "",
-    "Simple": "",
+    "HELLO": "ЗДОРОВ",
+    "Hello world": "Здрастье",
+    "Simple": "Простой",
     "There {count, plural, =0{ is } =1{ is } other{ are }}{count, plural, =0{} =1{ a } other{ several }}{count, plural, =0{ nothing } =1{ thing } other{ things }}": "",
-    "This is ngx-translate demo": "",
-    "tets": "",
-    "world": ""
+    "This is ngx-translate demo": "Это демо ngx-translate",
+    "tets": "тетс",
+    "world": "мир"
 }

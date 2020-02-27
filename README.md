@@ -1,5 +1,6 @@
-TODO:
-- implement dynamic lang support for pipes
-- typescript >= 3.2.0 (ngx-extract requirement)
-- marker must be imported by exact path: "@biesbjerg/ngx-translate-extract-marker"
-- don't extract from comments
+Issues:
+- if we change english string in code we are changing the key in all locales and that require re-translation everywhere
+- ngx-translate-extract
+	- marker must be imported by exact path: "@biesbjerg/ngx-translate-extract-marker"
+	- it may broke if uncompilable version of TS used in project
+	- it extracts from comments too

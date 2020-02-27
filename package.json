@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev": "ng serve --proxy-config proxy.conf.json",
     "server": "nodemon server/index.js",
-    "i18n-extract": "ngx-translate-extract --key-as-default-value --sort --clean --patterns '/**/*.html' '/**/!(*.spec).ts' --input ./src/app --output ./locales/en.po",
+    "i18n-extract": "ngx-translate-extract --sort --clean --patterns '/**/*.html' '/**/!(*.spec).ts' --input ./src/app --output ./locales/en.json",
     "i18n-lint": "ngx-translate-lint --config i18n-lint-config.json"
   },
   "private": true,

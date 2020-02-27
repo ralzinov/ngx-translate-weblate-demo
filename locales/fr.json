@@ -1,6 +1,0 @@
-{
-    "This is ngx-translate demo": "Ceci est une démo ngx-translate",
-    "Hello world": "Bonjour le monde",
-    "HELLO": "Bonjour {{value}}",
-    "world": "le monde"
-}

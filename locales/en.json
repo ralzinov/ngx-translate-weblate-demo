@@ -2,7 +2,7 @@
 	"HELLO": "HELLO",
 	"Hello world": "Hello world",
 	"Simple": "Simple",
-	"There {count, plural, =0{ is } =1{ is } other{ are }}{count, plural, =0{} =1{ a } other{ several }}{count, plural, =0{ nothing } =1{ thing } other{ things }}": "There {count, plural, =0{ is } =1{ is } other{ are }}{count, plural, =0{} =1{ a } other{ several }}{count, plural, =0{ nothing } =1{ thing } other{ things }}",
+	"There\n    {count, plural, =0{ is } one{ is } other{ are }}\n    {count, plural, =0{} one{ a } other{ several }}\n    {count, plural, =0{ nothing } one{ thing } other{ things }}": "There\n    {count, plural, =0{ is } one{ is } other{ are }}\n    {count, plural, =0{} one{ a } other{ several }}\n    {count, plural, =0{ nothing } one{ thing } other{ things }}",
 	"This is ngx-translate demo": "This is ngx-translate demo",
 	"tets": "tets",
 	"world": "world"

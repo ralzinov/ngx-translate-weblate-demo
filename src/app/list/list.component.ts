@@ -9,7 +9,7 @@ const WORLD_CONSTANT = i18n('world');
 const HOST_MESSAGE_PLURAL = i18n(`
     {hostGender, select,
         male {
-            {guestsLength, plural,
+            {otherGuestsLength, plural,
                 =0    { Mr. {hostName} does not give a party.}
                 one   { Mr. {hostName} invites {mainGuest} to <b>his</b> party.}
                 =2    { Mr. {hostName} invites {mainGuest} and one other person to <b>his</b> party.}
@@ -17,7 +17,7 @@ const HOST_MESSAGE_PLURAL = i18n(`
             }
         }
         female {
-            {guestsLength, plural,
+            {otherGuestsLength, plural,
                 =0    { Mrs. {hostName} does not give a party.}
                 one   { Mrs. {hostName} invites {mainGuest} to <b>her</b> party.}
                 =2    { Mrs. {hostName} invites {mainGuest} and one other person to <b>her</b> party.}
@@ -25,7 +25,7 @@ const HOST_MESSAGE_PLURAL = i18n(`
             }
         }
         other {
-            {guestsLength, plural,
+            {otherGuestsLength, plural,
                 =0    { {hostName} do not give a party.}
                 one   { {hostName} invite {mainGuest} to <b>their</b> party.}
                 =2    { {hostName} invite {mainGuest} and one other person to <b>their</b> party.}

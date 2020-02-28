@@ -3,32 +3,32 @@
 <fieldset>
     <legend>{{'Simple'|translate}}</legend>
     <p translate>Hello world</p>
-    <p>{{'Hello world'|uppercase|translate}}</p>
+    <p>{{'Hello world'|translate|uppercase}}</p>
 </fieldset>
 <br>
 
 <fieldset>
-    <legend>With params:</legend>
+    <legend translate>With params:</legend>
     <p>{{'HELLO'|translate:param}}</p>
     <p translate [translateParams]="param$|async">HELLO</p>
 </fieldset>
 <br>
 
 <fieldset>
-    <legend>Pipes</legend>
+    <legend translate>Pipes</legend>
     <p>Date: {{date|date:undefined:undefined:lang}}</p>
     <p>Currency: {{balance|currency:undefined:undefined:undefined:lang}}</p>
 </fieldset>
 <br>
 
 <fieldset>
-    <legend>Plurals</legend>
+    <legend translate>Plurals</legend>
     <p>
-        Select host
+        {{'Select host'|translate}}}
         <button *ngFor="let host of hosts" (click)="setHost(host)">{{host.name}}</button>
     </p>
     <p>
-        Select guests
+        {{'Select guests'|translate}}}
         <button (click)="add()">+</button>
         <button (click)="remove()">-</button>
     </p>
@@ -62,10 +62,10 @@
             }
         }
     </p>
-    <span *ngIf="guests.length">
-        <b>List</b>:
+    <div *ngIf="guests.length">
+        <b>{{'List'|translate}}</b>:
         <p *ngFor="let guest of guests">{{guest}}</p>
-    </span>
+    </div>
 
 </fieldset>
 

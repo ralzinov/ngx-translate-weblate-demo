@@ -35,7 +35,7 @@ export class ListComponent implements OnInit {
     );
 
     constructor(protected translate: TranslateService) {
-        this.translate.instant('tets');
+        this.translate.instant('test');
     }
 
     get lang(): string {

@@ -5,18 +5,21 @@ import {registerLocaleData} from '@angular/common';
 import {TranslateLoader, TranslateModuleConfig} from '@ngx-translate/core';
 import {default as fr} from '@angular/common/locales/fr';
 import {default as en} from '@angular/common/locales/en';
+import {default as ru} from '@angular/common/locales/ru';
 import {default as enExtra} from '@angular/common/locales/extra/en';
 import {default as frExtra} from '@angular/common/locales/extra/fr';
+import {default as ruExtra} from '@angular/common/locales/extra/ru';
 
 const LOCALES = {
-    fr, en
+    fr, en, ru,
 };
 
 type ILangKeys = keyof typeof LOCALES;
 
 const EXTRAS: {[k in ILangKeys]: object} = {
     fr: frExtra,
-    en: enExtra
+    en: enExtra,
+    ru: ruExtra
 };
 
 const DEFAULT_LOCALE = 'en';

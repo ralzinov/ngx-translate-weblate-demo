@@ -13,5 +13,6 @@
     "Select guests": "Выберите гостей",
     "Plurals": "Плюрализация",
     "Pipes": "Пайпы",
-    "List": "Список"
+    "List": "Список",
+    "{gender, select,\n            male{His name is}\n            female{Her name is}\n            other{Their names are }\n        } {{hosts[0].name}}": "{gender, select,\n            male{Его имя}\n            female{Её имя}\n            other{Их имя}\n        } {{hosts[0].name}}"
 }

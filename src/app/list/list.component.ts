@@ -83,7 +83,6 @@ export class ListComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.param$.subscribe(console.log);
     }
 
     setHost(host: IHostProfile): void {

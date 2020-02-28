@@ -10,26 +10,26 @@ const HOST_MESSAGE_PLURAL = i18n(`
     {hostGender, select,
         male {
             {guestsLength, plural,
-                =0    { {hostName} does not give a party.}
-                one   { {hostName} invites {mainGuest} to <b>his</b> party.}
-                =2    { {hostName} invites {mainGuest} and one other person to <b>his</b> party.}
-                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>his</b> party.}
+                =0    { Mr. {hostName} does not give a party.}
+                one   { Mr. {hostName} invites {mainGuest} to <b>his</b> party.}
+                =2    { Mr. {hostName} invites {mainGuest} and one other person to <b>his</b> party.}
+                other { Mr. {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>his</b> party.}
             }
         }
         female {
             {guestsLength, plural,
-                =0    { {hostName} does not give a party.}
-                one   { {hostName} invites {mainGuest} to <b>her</b> party.}
-                =2    { {hostName} invites {mainGuest} and one other person to <b>her</b> party.}
-                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>her</b> party.}
+                =0    { Mrs. {hostName} does not give a party.}
+                one   { Mrs. {hostName} invites {mainGuest} to <b>her</b> party.}
+                =2    { Mrs. {hostName} invites {mainGuest} and one other person to <b>her</b> party.}
+                other { Mrs. {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>her</b> party.}
             }
         }
         other {
             {guestsLength, plural,
-                =0    { {hostName} does not give a party.}
-                one   { {hostName} invites {mainGuest} to <b>their</b> party.}
-                =2    { {hostName} invites {mainGuest} and one other person to <b>their</b> party.}
-                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>their</b> party.}
+                =0    { {hostName} do not give a party.}
+                one   { {hostName} invite {mainGuest} to <b>their</b> party.}
+                =2    { {hostName} invite {mainGuest} and one other person to <b>their</b> party.}
+                other { {hostName} invite {mainGuest} and {otherGuestsLength} other people to <b>their</b> party.}
             }
         }
     }
@@ -50,8 +50,8 @@ export class ListComponent implements OnInit {
     balance = 42.37;
 
     hosts: IHostProfile[] = [
-        {name: 'Mr. Johnson', gender: 'male'},
-        {name: 'Mrs. Brown', gender: 'female'},
+        {name: 'Johnson', gender: 'male'},
+        {name: 'Brown', gender: 'female'},
         {name: 'Hotel Artur'},
     ];
     host: IHostProfile = this.hosts[0];

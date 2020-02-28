@@ -25,7 +25,14 @@
     <legend translate>Plurals</legend>
     <p>
         {{'Select host'|translate}}
-        <button *ngFor="let host of hosts" (click)="setHost(host)">{{host.name}}</button>
+        <button
+            translate
+            [translateParams]="{name: host.name, gender: host.gender}"
+            *ngFor="let host of hosts"
+            (click)="setHost(host)"
+        >
+            HOST_NAME_PREFIX
+        </button>
     </p>
     <p>
         {{'Select guests'|translate}}
@@ -34,7 +41,7 @@
     </p>
 
     <!-- Example of simple ICU message with template from json -->
-    <p *ngIf="host" translate [translateParams]="{name: host.name, gender: host.gender}">HOST_NAME</p>
+    <p *ngIf="host" translate [translateParams]="{name: host.name, gender: host.gender}">HOST_NAME_PREFIX</p>
 
     <!-- Example of ICU message with template from variable -->
     <p *ngIf="host" [innerHTML]="hostPluralMessage$|async"></p>

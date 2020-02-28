@@ -69,9 +69,8 @@ export class ListComponent implements OnInit {
         map(() => this.translate.instant(HOST_MESSAGE_PLURAL, {
             hostGender: this.host.gender,
             hostName: this.host.name,
-            guestsLength: this.guests.length,
             mainGuest: this.guests[0],
-            otherGuestsLength: this.guests.length - 1
+            otherGuestsLength: this.guests.length > 1 ? this.guests.length - 1 : this.guests.length
         }))
     );
 

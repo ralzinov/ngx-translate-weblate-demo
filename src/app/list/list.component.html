@@ -35,32 +35,11 @@
 
 
     <p *ngIf="host" translate>
-        {host.gender, select,
-            male {
-                {guests.length, plural,
-                    =0    {{{host.name}} does not give a party.}
-                    one   {{{host.name}} invites {{guests[0]}} to <b>his</b> party.}
-                    =2    {{{host.name}} invites {{guests[0]}} and one other person to <b>his</b> party.}
-                    other {{{host.name}} invites {{guests[0]}} and {{guests.length}} other people to <b>his</b> party.}
-                }
-            }
-            female {
-                {guests.length, plural,
-                    =0    {{{host.name}} does not give a party.}
-                    one   {{{host.name}} invites {{guests[0]}} to <b>her</b> party.}
-                    =2    {{{host.name}} invites {{guests[0]}} and one other person to <b>her</b> party.}
-                    other {{{host.name}} invites {{guests[0]}} and {{guests.length}} other people to <b>her</b> party.}
-                }
-            }
-            other {
-                {guests.length, plural,
-                    =0    {{{hostName}} does not give a party.}
-                    one   {{{hostName}} invites {{guests[0]}} to <b>their</b> party.}
-                    =2    {{{hostName}} invites {{guests[0]}} and one other person to <b>their</b> party.}
-                    other {{{hostName}} invites {{guests[0]}} and {{guests.length - 1}} other people to <b>their</b> party.}
-                }
-            }
-        }
+        {gender, select,
+            male{His name is}
+            female{Her name is}
+            other{Their names are }
+        } {{hosts[0].name}}
     </p>
     <div *ngIf="guests.length">
         <b>{{'List'|translate}}</b>:

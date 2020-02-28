@@ -26,6 +26,8 @@
     "@types/faker": "^4.1.10",
     "core-js": "^2.5.4",
     "faker": "^4.1.0",
+    "messageformat": "^2.3.0",
+    "ngx-translate-messageformat-compiler": "^4.5.0",
     "rxjs": "~6.3.3",
     "stream": "0.0.2",
     "tslib": "^1.9.0",

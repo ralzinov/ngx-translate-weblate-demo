@@ -28,6 +28,8 @@ export class ListComponent implements OnInit {
     host: IHostProfile = this.hosts[0];
     guests = [];
 
+    gender = 'male';
+
     param = {value: WORLD_CONSTANT};
     param$ = this.translate.stream(WORLD_CONSTANT).pipe(
         filter(Boolean),

@@ -2,12 +2,14 @@ import {Observable} from 'rxjs';
 import {tap} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {registerLocaleData} from '@angular/common';
-import {TranslateLoader, TranslateModuleConfig} from '@ngx-translate/core';
+import {TranslateCompiler, TranslateLoader, TranslateModuleConfig} from '@ngx-translate/core';
+import {TranslateMessageFormatCompiler} from 'ngx-translate-messageformat-compiler';
+
 import {default as fr} from '@angular/common/locales/fr';
-import {default as en} from '@angular/common/locales/en';
-import {default as ru} from '@angular/common/locales/ru';
-import {default as enExtra} from '@angular/common/locales/extra/en';
 import {default as frExtra} from '@angular/common/locales/extra/fr';
+import {default as en} from '@angular/common/locales/en';
+import {default as enExtra} from '@angular/common/locales/extra/en';
+import {default as ru} from '@angular/common/locales/ru';
 import {default as ruExtra} from '@angular/common/locales/extra/ru';
 
 const LOCALES = {
@@ -16,7 +18,7 @@ const LOCALES = {
 
 type ILangKeys = keyof typeof LOCALES;
 
-const EXTRAS: {[k in ILangKeys]: object} = {
+const EXTRAS: { [k in ILangKeys]: object } = {
     fr: frExtra,
     en: enExtra,
     ru: ruExtra
@@ -25,7 +27,8 @@ const EXTRAS: {[k in ILangKeys]: object} = {
 const DEFAULT_LOCALE = 'en';
 
 export class TranslationsLoader implements TranslateLoader {
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {
+    }
 
     getTranslation(lang: string = DEFAULT_LOCALE): Observable<any> {
         return this.http.post(`/api/locale/${lang}/`, null, {}).pipe(
@@ -39,6 +42,10 @@ export const TranslationsProvider: TranslateModuleConfig = {
         provide: TranslateLoader,
         useClass: TranslationsLoader,
         deps: [HttpClient]
+    },
+    compiler: {
+        provide: TranslateCompiler,
+        useClass: TranslateMessageFormatCompiler
     },
     useDefaultLang: false
 };

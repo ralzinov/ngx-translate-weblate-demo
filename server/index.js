@@ -19,7 +19,7 @@ app.post('/api/locale/:lang/', (req, res) => {
         }
 
         fs.readFile(filePath, (err, data) => {
-            res.send(data);
+            res.json(JSON.parse(data));
         });
     });
 });

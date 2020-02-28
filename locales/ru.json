@@ -1,5 +1,5 @@
 {
-    "HELLO": "Привет {{value}}",
+    "HELLO": "Привет value",
     "Hello world": "Привет мир",
     "Simple": "Простой",
     "There {count, plural, =0{ is } =1{ is } other{ are }}{count, plural, =0{} =1{ a } other{ several }}{count, plural, =0{ nothing } =1{ thing } other{ things }}": "",

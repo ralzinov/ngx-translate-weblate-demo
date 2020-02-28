@@ -16,8 +16,8 @@
 
 <fieldset>
     <legend translate>Pipes</legend>
-    <p>Date: {{date|date:undefined:undefined:lang}}</p>
-    <p>Currency: {{balance|currency:undefined:undefined:undefined:lang}}</p>
+    <p>{{'Date:'|translate}} {{date|date:undefined:undefined:lang}}</p>
+    <p>{{'Currency:'|translate}} {{balance|currency:undefined:undefined:undefined:lang}}</p>
 </fieldset>
 <br>
 
@@ -33,14 +33,12 @@
         <button (click)="remove()">-</button>
     </p>
 
+    <!-- Example of simple ICU message with template from json -->
+    <p *ngIf="host" translate [translateParams]="{name: host.name, gender: host.gender}">HOST_NAME</p>
 
-    <p *ngIf="host" translate>
-        {gender, select,
-            male{His name is}
-            female{Her name is}
-            other{Their names are }
-        } {{hosts[0].name}}
-    </p>
+    <!-- Example of ICU message with template from variable -->
+    <p *ngIf="host" [innerHTML]="hostPluralMessage$|async"></p>
+
     <div *ngIf="guests.length">
         <b>{{'List'|translate}}</b>:
         <p *ngFor="let guest of guests">{{guest}}</p>

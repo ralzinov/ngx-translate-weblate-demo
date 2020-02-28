@@ -1,5 +1,9 @@
 {
+	"\n    {hostGender, select,\n        male {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>his</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>his</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>his</b> party.}\n            }\n        }\n        female {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>her</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>her</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>her</b> party.}\n            }\n        }\n        other {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>their</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>their</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>their</b> party.}\n            }\n        }\n    }\n": "\n    {hostGender, select,\n        male {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>his</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>his</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>his</b> party.}\n            }\n        }\n        female {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>her</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>her</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>her</b> party.}\n            }\n        }\n        other {\n            {guestsLength, plural,\n                =0    { {hostName} does not give a party.}\n                one   { {hostName} invites {mainGuest} to <b>their</b> party.}\n                =2    { {hostName} invites {mainGuest} and one other person to <b>their</b> party.}\n                other { {hostName} invites {mainGuest} and {otherGuestsLength} other people to <b>their</b> party.}\n            }\n        }\n    }\n",
+	"Currency:": "Currency:",
+	"Date:": "Date:",
 	"HELLO": "Hello value",
+	"HOST_NAME": "{gender, select, male{His name is} female{Her name is} other{Their names are }} {name}",
 	"Hello world": "Hello world",
 	"List": "List",
 	"Pipes": "Pipes",
@@ -10,6 +14,5 @@
 	"This is ngx-translate demo": "This is ngx-translate demo",
 	"With params:": "With params:",
 	"test": "test",
-	"world": "world",
-	"{gender, select,\n            male{His name is}\n            female{Her name is}\n            other{Their names are }\n        } {{hosts[0].name}}": "{gender, select,\n            male{His name is}\n            female{Her name is}\n            other{Their names are }\n        } {{hosts[0].name}}"
+	"world": "world"
 }

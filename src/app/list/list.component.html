@@ -24,11 +24,11 @@
 <fieldset>
     <legend translate>Plurals</legend>
     <p>
-        {{'Select host'|translate}}}
+        {{'Select host'|translate}}
         <button *ngFor="let host of hosts" (click)="setHost(host)">{{host.name}}</button>
     </p>
     <p>
-        {{'Select guests'|translate}}}
+        {{'Select guests'|translate}}
         <button (click)="add()">+</button>
         <button (click)="remove()">-</button>
     </p>

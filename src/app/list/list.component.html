@@ -10,7 +10,7 @@
 <fieldset>
     <legend translate>With params:</legend>
     <p>{{'HELLO'|translate:param}}</p>
-    <p translate [translateParams]="param$|async">HELLO</p>
+    <p *ngIf="param$|async as params" translate [translateParams]="params">HELLO</p>
 </fieldset>
 <br>
 

@@ -1,0 +1,4 @@
+msgid "%d user likes this."
+msgid_plural "%d users like this."
+msgstr[0] ""
+msgstr[1] ""
